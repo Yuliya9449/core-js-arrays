@@ -515,7 +515,7 @@ function findCommonElements(arr1, arr2) {
   return arr1.filter((elem) => arr2.includes(elem));
 }
 
-//! 29
+//! 29 !!!!!!!!!!!!!!!!!!!
 /**
  * Finds the length of the longest increasing subsequence of a given array of integers.
  *
@@ -559,10 +559,11 @@ function findLongestIncreasingSubsequence(nums) {
  *  propagateItemsByPositionIndex([ 'a', 'b', 'c', null ]) => [ 'a', 'b', 'b', 'c', 'c', 'c',  null, null, null, null ]
  *  propagateItemsByPositionIndex([ 1,2,3,4,5 ]) => [ 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5 ]
  */
-function propagateItemsByPositionIndex(/* arr */) {
-  throw new Error('Not implemented');
+function propagateItemsByPositionIndex(arr) {
+  return arr.flatMap((elem, idx) => Array.from({ length: idx + 1 }).fill(elem));
 }
 
+//! 31
 /**
  * Shifts an array by n positions. If n is negative, the array is shifted to the left;
  * if positive, it is shifted to the right.
