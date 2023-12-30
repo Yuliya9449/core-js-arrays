@@ -62,6 +62,7 @@ function findElement(arr, value) {
   return arr.indexOf(value);
 }
 
+//! 4
 /**
  * Returns a number of all occurrences of the specified item in an array.
  *
@@ -76,10 +77,11 @@ function findElement(arr, value) {
  *    findAllOccurrences([ null, undefined, null ], null) => 2
  *    findAllOccurrences([ true, 0, 1, 'true' ], true) => 1
  */
-function findAllOccurrences(/* arr, item */) {
-  throw new Error('Not implemented');
+function findAllOccurrences(arr, item) {
+  return arr.filter((elem) => elem === item).length;
 }
 
+//! 5
 /**
  * Removes falsy values from the specified array.
  * Falsy values: false, null, 0, "", undefined, and NaN.
