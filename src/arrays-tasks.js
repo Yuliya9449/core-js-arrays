@@ -283,6 +283,7 @@ function createNDimensionalArray(/* n, size */) {
   throw new Error('Not implemented');
 }
 
+//! 17
 /**
  * Flattens a nested array into a single-level array.
  *
@@ -294,10 +295,15 @@ function createNDimensionalArray(/* n, size */) {
  *    flattenArray(['a', ['b', ['c', 'd'], 'e'], 'f']) => ['a', 'b', 'c', 'd', 'e', 'f']
  *    flattenArray([1, 2, 3, 4]) => [1, 2, 3, 4]
  */
-function flattenArray(/* nestedArray */) {
-  throw new Error('Not implemented');
+function flattenArray(nestedArray) {
+  if (nestedArray.every((elem) => !Array.isArray(elem))) {
+    return nestedArray;
+  }
+
+  return flattenArray(nestedArray.flat());
 }
 
+//! 18
 /**
  * Projects each element of the specified array to a sequence
  * and flattens the resulting sequences into one array.
