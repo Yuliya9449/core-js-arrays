@@ -291,15 +291,27 @@ function distinct(arr) {
  *    createNDimensionalArray(4, 2) => [[[[0, 0], [0, 0]], [[0, 0], [0, 0]]], [[[0, 0], [0, 0]], [[0, 0], [0, 0]]]]
  *    createNDimensionalArray(1, 1) => [0]
  */
+//! 16.1
 function createNDimensionalArray(n, size) {
-  if (n < 2) {
-    return Array.from({ length: size }).fill(0);
+  if (n < 1) {
+    return 0;
   }
 
   return Array.from({ length: size }).fill(
     createNDimensionalArray(n - 1, size)
   );
 }
+
+//! 16.2
+// function createNDimensionalArray(n, size) {
+//   if (n < 2) {
+//     return Array.from({ length: size }).fill(0);
+//   }
+
+//   return Array.from({ length: size }).fill(
+//     createNDimensionalArray(n - 1, size)
+//   );
+// }
 
 //! 17
 /**
