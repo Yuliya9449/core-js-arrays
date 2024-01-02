@@ -100,9 +100,15 @@ function findAllOccurrences(arr, item) {
  *    removeFalsyValues([ 1, 2, 3, 4, 5, 'false' ]) => [ 1, 2, 3, 4, 5, 'false' ]
  *    removeFalsyValues([ false, 0, NaN, '', undefined ]) => [ ]
  */
+//! 5.1
 function removeFalsyValues(arr) {
-  return arr.filter((elem) => elem);
+  return arr.filter(Boolean);
 }
+
+//! 5.2
+// function removeFalsyValues(arr) {
+//   return arr.filter((elem) => elem);
+// }
 
 //! 6
 /**
