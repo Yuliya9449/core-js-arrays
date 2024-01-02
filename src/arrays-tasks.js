@@ -77,9 +77,15 @@ function findElement(arr, value) {
  *    findAllOccurrences([ null, undefined, null ], null) => 2
  *    findAllOccurrences([ true, 0, 1, 'true' ], true) => 1
  */
+//! 4.1
 function findAllOccurrences(arr, item) {
-  return arr.filter((elem) => elem === item).length;
+  return arr.reduce((acc, elem) => acc + (elem === item), 0);
 }
+
+//! 4.2
+// function findAllOccurrences(arr, item) {
+//   return arr.filter((elem) => elem === item).length;
+// }
 
 //! 5
 /**
